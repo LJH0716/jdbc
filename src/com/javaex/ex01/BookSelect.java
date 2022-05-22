@@ -26,12 +26,34 @@ public class BookSelect {
 			
 			//(1)SQL문 준비
 			
+			String query = "";
+			query += " select book_id ";
+			query += " 		  ,title ";	
+			query += "  	  ,pubs";
+			query += "  	  ,pub_date";
+			query += "  	  ,author_id";
+			query += " from book";
+			
+			
 			//(2)바인딩
+			pstmt = conn.prepareStatement(query);
 			
 			//(3)실행	
 			rs = pstmt.executeQuery(); 
 			
 			// 4.결과처리
+			while(rs.next()) {
+				
+				int bookId = rs.getInt("book_id");
+				String title = rs.getString("title");
+				String pubs = rs.getString("pubs");
+				String pubDate = rs.getString("pub_date");
+				int authorId = rs.getInt("author_id");
+				
+				System.out.println(bookId + "," + title + "," + pubs + "," + pubDate + "," + authorId);
+						
+			}
+			
 			
 		} catch (ClassNotFoundException e) {
 			System.out.println("error: 드라이버 로딩 실패 - " + e);
