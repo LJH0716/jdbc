@@ -7,23 +7,23 @@ public class BookVo {
 	private String title;
 	private String pubs;
 	private String pubDate;
-	private int authorId;
+	private String authorName;
 
 	// 생성자
 	public BookVo() {
 	}
 
-	public BookVo(int bookId, String title, String pubs, String pubDate, int authorId) {
+	public BookVo(int bookId, String title, String pubs, String pubDate, String authorName) {
 		super();
 		this.bookId = bookId;
 		this.title = title;
 		this.pubs = pubs;
 		this.pubDate = pubDate;
-		this.authorId = authorId;
+		this.authorName = authorName;
 	}
 
 	// 메소드 getter/setter
-
+	
 	public int getBookId() {
 		return bookId;
 	}
@@ -56,20 +56,27 @@ public class BookVo {
 		this.pubDate = pubDate;
 	}
 
-	public int getAuthorId() {
-		return authorId;
+	public String getAuthorName() {
+		return authorName;
 	}
 
-	public void setAuthorId(int authorId) {
-		this.authorId = authorId;
+	public void setAuthorName(String authorName) {
+		this.authorName = authorName;
 	}
 
 	// 메소드 일반
-
+	
 	@Override
 	public String toString() {
 		return "BookVo [bookId=" + bookId + ", title=" + title + ", pubs=" + pubs + ", pubDate=" + pubDate
-				+ ", authorId=" + authorId + "]";
+				+ ", authorName=" + authorName + "]";
 	}
+
+	
+
+	
+	
+
+	
 
 }
