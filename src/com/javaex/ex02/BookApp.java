@@ -28,11 +28,18 @@ public class BookApp {
 		List<BookVo> bookList = bookDao.bookSelect();
 
 		for (int i = 0; i < bookList.size(); i++) {
-
+			
 			BookVo bookVo = bookList.get(i);
 			System.out.println(bookVo.getBookId() + "," + bookVo.getTitle() + "," + bookVo.getPubs() + ","
 					+ bookVo.getPubDate() + "," + bookVo.getAuthorName());
-
+			
+			/* 다른 방법
+			System.out.println(bookList.get(i).getBookId() + "," +
+							   bookList.get(i).getTitle() + "," +
+					           bookList.get(i).getPubs() + "," +
+					           bookList.get(i).getPubDate() + "," +
+					           bookList.get(i).getAuthorName());
+	       */    
 		}
 
 	}
