@@ -18,7 +18,8 @@ public class AuthorSelect {
 		try {
 			
 		// 1. JDBC 드라이버 (Oracle) 로딩
-			Class.forName("oracle.jdbc.driver.OracleDriver");	
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			
 		// 2. Connection 얻어오기
 			String url = "jdbc:oracle:thin:@localhost:1521:xe";
 			conn = DriverManager.getConnection(url, "webdb", "webdb");

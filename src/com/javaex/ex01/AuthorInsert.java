@@ -38,7 +38,7 @@ public class AuthorInsert {
 				//String query = "insert into author values(seq_author_id.nextval, '이문열', '경북 영양')";
 						//쿼리문에 작성되어 있던 ;는 빼줘야함
 						//? -->문법, 사용자 입력값으로 세팅해 두는 것
-			System.out.println(query);
+			//System.out.println(query);
 			
 			//(2)바인딩		
 			pstmt = conn.prepareStatement(query); //문자열을 쿼리로 만들기(바인딩)
