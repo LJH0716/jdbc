@@ -13,6 +13,16 @@ public class BookVo {
 	public BookVo() {
 	}
 
+	
+	public BookVo(String title, String pubs, String pubDate, String authorName) {
+		super();
+		this.title = title;
+		this.pubs = pubs;
+		this.pubDate = pubDate;
+		this.authorName = authorName;
+	}
+
+
 	public BookVo(int bookId, String title, String pubs, String pubDate, String authorName) {
 		super();
 		this.bookId = bookId;

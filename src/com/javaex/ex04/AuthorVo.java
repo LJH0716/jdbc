@@ -17,7 +17,7 @@ public class AuthorVo {
 		super();
 		this.authorName = authorName;
 		this.authorDesc = authorDesc;
-	}		 //변경****(3)
+	}		 //변경****
              //--> 생성자 추가로 만들어주기
 	
 	public AuthorVo(int authorId, String authorName, String authorDesc) {
